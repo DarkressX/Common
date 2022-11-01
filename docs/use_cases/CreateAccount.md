@@ -14,7 +14,7 @@ Here the User has to create an account. They can log in and log out.
 
 ## 4. Postconditions
 
-*tbd*
+- Account is created and user is logged in.
 
 ## 5. Effort estimation
 
