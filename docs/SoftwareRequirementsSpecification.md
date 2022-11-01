@@ -22,12 +22,13 @@ Planned Subsystems are:
 ## 1.3 Definitions
 | Abbreviation | Explanation                         |
 |--------------|-------------------------------------|
-| SRS          | Software Requrements Specification  |
+| SRS          | Software Requirements Specification |
 | UC           | Use Case                            |
 | Web-App      | Web-Application                     |
 | UCD          | Use Case Diagram                    |
 | tbd          | to be determined                    |
 | FAQ          | Frequently asked questions          |
+| API          | Application programming interface   |
 
 ## 1.4 References
 | Title                                         | Date        | Publishing organization  |
