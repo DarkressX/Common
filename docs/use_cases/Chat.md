@@ -8,14 +8,20 @@ Here the user will be able to chat with another person.
 
 ![StartChat](/docs/mockups/mock_chat.png)
 
-## 3. Preconditions
+## 3. Flow of Events
+
+Activity Diagram
+
+![ChatFunctionsActivityDiagram](/docs/use_cases/images/ActivityDiagrams/ChatFunctionsActivityDiagram.png)
+
+## 4. Preconditions
 
 * Account has been created
 
-## 4. Postconditions
+## 5. Postconditions
 
 * Topic of chat will be saved in history
 
-## 5. Effort estimation
+## 6. Effort estimation
 
 10h

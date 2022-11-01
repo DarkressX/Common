@@ -8,14 +8,20 @@ Here the User has to create an account. They can log in and log out.
 
 *tbd*
 
-## 3. Preconditions
+## 3. Flow of Events
+
+Activity Diagram
+
+![CreateAccountActivityDiagram](/docs/use_cases/images/ActivityDiagrams/CreateAccountActivityDiagram.jpg)
+
+## 4. Preconditions
 
 * tbd*
 
-## 4. Postconditions
+## 5. Postconditions
 
 - Account is created and user is logged in.
 
-## 5. Effort estimation
+## 6. Effort estimation
 
 5h

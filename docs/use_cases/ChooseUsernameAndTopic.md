@@ -8,6 +8,12 @@ Here, the user will be able to select a name which will be visible to other user
 
 ![StartChat](/docs/mockups/mock_start.png)
 
+## 3. Flow of Events
+
+Activity Diagram
+
+![TopicSearchActivityDiagram](/docs/use_cases/images/ActivityDiagrams/TopicSearchActivityDiagram.png)
+
 ## 3. Preconditions
 
 * None
