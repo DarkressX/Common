@@ -14,16 +14,16 @@ Activity Diagram
 
 ![TopicSearchActivityDiagram](/docs/use_cases/images/ActivityDiagrams/TopicSearchActivityDiagram.png)
 
-## 3. Preconditions
+## 4. Preconditions
 
 * None
 
-## 4. Postconditions
+## 5. Postconditions
 
 * The user has created an account
 * The user chose a name
 * The user chose a topic
 
-## 5. Effort estimation
+## 6. Effort estimation
 
 10h
