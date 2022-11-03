@@ -11,13 +11,17 @@ Planned Subsystems are:
   -	User interface:  
     The user interface is a website with chat room. 
   -	Account System:  
-    we don’t have an Account System. Users choose with each new application a username and a topic.   
+    To be able to use the Website you must creat an account. After you creat a account you are able log in and log out. 
   -	Block a User:  
-    During a Session a User can block another User.
+    During a Session a User can block and unblock an other User. 
   -	Connecting People:  
     After two User choose the same topic in the web application, they get connected and start to chat together. User can also quit a chat. 
   -	Storing Data:  
-    The Data are stored just temporary during a chat. After user quit a chat, the data also get lost. 
+    The Data will be stored in a Database System. 
+  - Topic
+    If a topic is in the same category of an other topic for example banane and apple are both fruts, then they also will get connected.
+    There will also be same recommendations for the Users if they don't know what kind of topic they schoud choose. 
+    
 
 ## 1.3 Definitions
 | Abbreviation | Explanation                         |
@@ -84,7 +88,8 @@ This section will explain the different use cases, you could see in the Use Case
 * 3.1.2 Choose username / Choose topic text
 * 3.1.3 Chat
 * 3.1.4 Quit chat/disconnect
-* 3.1.5 Block another user
+* 3.1.5 Block another user  
+
 3.1.1 [Create Account](/docs/use_cases/CreateAccount.md)
 
 This will be the beginning for every interaction on our platform.
