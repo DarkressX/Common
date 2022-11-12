@@ -1,73 +1,86 @@
 package org.common.common.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Collection;
+
+import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Table(name = "users")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class User
+{
+    @Id @GeneratedValue(strategy = AUTO)
     private Long id;
-
-    @Column(name = "name")
     private String name;
+    private String username;
+    private String password;
 
-    @Column(name = "dp")
-    private String dp;
-
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "role")
-    private String role;
-
-    public User() {
-        super();
+    public Collection<Role> getRoles()
+    {
+        return roles;
     }
 
-    public User(Long id, String name, String dp, String email, String role) {
-        super();
+    public void setRoles(Collection<Role> roles)
+    {
+        this.roles = roles;
+    }
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<Role> roles = new ArrayList<>();
+
+    public User(Long id, String name, String username, String password, Collection<Role> roles)
+    {
         this.id = id;
         this.name = name;
-        this.dp = dp;
-        this.email = email;
-        this.role = role;
+        this.username = username;
+        this.password = password;
+        this.roles = roles;
     }
 
-    public Long getId() {
+    public User()
+    {
+    }
+
+    public Long getId()
+    {
         return id;
     }
-    public void setId(Long id) {
+
+    public void setId(Long id)
+    {
         this.id = id;
     }
-    public String getName() {
+
+    public String getName()
+    {
         return name;
     }
-    public void setName(String name) {
+
+    public void setName(String name)
+    {
         this.name = name;
     }
-    public String getEmail() {
-        return email;
+
+    public String getUsername()
+    {
+        return username;
     }
-    public void setEmail(String email) {
-        this.email = email;
+
+    public void setUsername(String username)
+    {
+        this.username = username;
     }
-    public String getDp() {
-        return dp;
+
+    public String getPassword()
+    {
+        return password;
     }
-    public void setDp(String dp) {
-        this.dp = dp;
+
+    public void setPassword(String password)
+    {
+        this.password = password;
     }
-    public String getRole() {
-        return role;
-    }
-    public void setRole(String role) {
-        this.role = role;
-    }
+
+
 }
