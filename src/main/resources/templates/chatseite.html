@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Common</title>
+    <meta name="description" content="Common" />
+    <link th:href="@{/styles/chatseite.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="body">
+    </div>
+    <div class="main">
+      <div id="logo" class="logo"></div>
+      <div id="chatbox" class="chatbox">
+        <div class="msg left">Message 1 döjhnsak salkdj sjd öla lakj dslalk</div>
+        <div class="msg right">Message 2</div>
+        <div class="msg left">Message 3</div>
+        <div class="msg right">Message 4</div>
+        <div class="msg left">Message 5</div>
+        <div class="msg right">Message 2</div>
+        <div class="msg left">Message 3</div>
+        <div class="msg right">Message 4</div>
+        <div class="msg left">Message 5</div>       
+        <div class="msg right">Message 2</div>
+        <div class="msg left">Message 3</div>
+        <div class="msg right">Message 4</div>
+        <div class="msg left">Message 5</div>
+      </div>
+
+      <input id="chatinput" class="chatinput" type="text" />
+
+      <footer>
+        <h1>Connected with: Max Mustermann</h1>
+        <button onclick="send()">Report :(</button>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // jQuery Document
+      $(document).ready(function () {});
+    </script>
+  </body>
+
+  <script>
+    function send() {
+      var msg = document.getElementById('chatinput').value;
+      document.getElementById('chatinput').value = '';
+      document.getElementById('chatbox').innerHTML += "<div class='msg right'>" + msg + '</div>';
+    }
+  </script>
+</html>
