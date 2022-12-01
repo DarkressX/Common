@@ -8,7 +8,7 @@ import static javax.persistence.GenerationType.AUTO;
 
 @Entity
 @Table(name = "users")
-public class User
+public class ApplicationUser
 {
     @Id @GeneratedValue(strategy = AUTO)
     private Long id;
@@ -29,7 +29,7 @@ public class User
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<Role> roles = new ArrayList<>();
 
-    public User(Long id, String name, String username, String password, Collection<Role> roles)
+    public ApplicationUser(Long id, String name, String username, String password, Collection<Role> roles)
     {
         this.id = id;
         this.name = name;
@@ -38,7 +38,7 @@ public class User
         this.roles = roles;
     }
 
-    public User()
+    public ApplicationUser()
     {
     }
 
