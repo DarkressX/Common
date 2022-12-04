@@ -1,0 +1,46 @@
+Body {
+	 background: url(background.png) repeat-y;
+       /* width: 100%;
+        height: 100%;
+        margin: auto;
+        font-weight: 300;*/
+        background-size: contain;
+}
+
+.button {
+  border: 1em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  bottom:14px;
+  border-radius:22px;
+  padding:0em 2.5em;
+  height: 4%;
+
+}
+
+.button1 {
+  position: absolute;
+  top: 49%;
+  left: 46.5%;
+  background:rgba(197,62,126,.33) ! important;
+
+}
+
+.button1:hover {
+  background-color: #8950AC;
+  color: white;
+}
+
+.button2 {
+  position: absolute;
+  top: 55%;
+  left: 44.5%;
+  background:rgba(197,62,126,.33) ! important;
+}
+
+.button2:hover {
+  background-color: #8950AC;
+  color: white;
+}

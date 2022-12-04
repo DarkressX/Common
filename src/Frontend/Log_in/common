@@ -1,0 +1,17 @@
+  function tas()
+    {
+        var pw1 =$("#password").val();
+        var pw2 = $("#password2").val();
+       // var tas = document.getElementById("#submit").value;
+        if (pw1 != pw2 )
+        {
+         window.location.href = ("Successful.html");
+
+        }else{
+
+         aline("Passwörter müssen gleich sein!");
+         document.getElementById("#passwort");
+         return false;
+        }
+
+    }
