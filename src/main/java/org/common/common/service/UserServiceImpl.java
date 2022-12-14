@@ -3,6 +3,8 @@ package org.common.common.service;
 //import lombok.extern.slf4j.Slf4j;
 import org.common.common.model.Role;
 import org.common.common.model.ApplicationUser;
+import org.common.common.model.UserActivation;
+import org.common.common.repository.ActivationUserRepository;
 import org.common.common.repository.RoleRepository;
 import org.common.common.repository.UserRepository;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -16,6 +18,7 @@ import javax.transaction.Transactional;
 import java.util.ArrayDeque;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @Transactional
@@ -25,12 +28,14 @@ public class UserServiceImpl implements UserService, UserDetailsService
     private final UserRepository userRepository;
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
+    private final ActivationUserRepository actRepo;
 
-    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder)
+    public UserServiceImpl(UserRepository userRepository, RoleRepository roleRepository, PasswordEncoder passwordEncoder, ActivationUserRepository actRepo)
     {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
+        this.actRepo = actRepo;
     }
 
     @Override
@@ -56,6 +61,15 @@ public class UserServiceImpl implements UserService, UserDetailsService
         return userRepository.save(user);
     }
 
+    public UserActivation saveActivationUser(UserActivation user){
+        return actRepo.save(user);
+    }
+    public UserActivation getUserActivationByUuid(UUID uuid) {return actRepo.findByUuid(uuid);}
+    public UserActivation getUserActivationByUserId(Long id) {return actRepo.findByUserId(id);}
+    public void deleteUserActivation(UserActivation user) {
+        actRepo.delete(user);
+    }
+
     @Override
     public Role saveRole(Role role)
     {
@@ -70,12 +84,23 @@ public class UserServiceImpl implements UserService, UserDetailsService
         user.getRoles().add(role);
     }
 
+    public void confirm(UUID id){
+        Collection<Role> roles = null;
+        roles.add(new Role(1l, "User", Role.Type.USER));
+        ApplicationUser user = getUserById(getUserActivationByUuid(id).getUserId());
+        user.setRoles(roles);
+        userRepository.save(user);
+        deleteUserActivation(getUserActivationByUuid(id));
+    }
+
     @Override
     public ApplicationUser getUser(String username)
     {
         //log.info("Fetching user {}", username);
         return userRepository.findByUsername(username);
     }
+
+    public ApplicationUser getUserById(Long id) {return userRepository.findById(id).get();}
 
     @Override
     public List<ApplicationUser> getUsers()

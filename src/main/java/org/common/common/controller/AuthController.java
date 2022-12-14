@@ -3,6 +3,8 @@ package org.common.common.controller;
 
 
 import org.common.common.model.ApplicationUser;
+import org.common.common.model.Role;
+import org.common.common.model.UserActivation;
 import org.common.common.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +26,7 @@ import javax.mail.internet.AddressException;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
 import java.util.UUID;
 
@@ -41,7 +44,7 @@ public class AuthController {
     @Autowired
     public JavaMailSender jmsender;
 
-    public void sendEmail(String receiver, int id) throws AddressException, MessagingException, IOException {
+    public void sendEmail(String receiver, Long id) throws AddressException, MessagingException, IOException {
         UUID uuid = UUID.randomUUID();
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
@@ -67,11 +70,11 @@ public class AuthController {
     @PostConstruct
     private void createUser() {
         String password = pwendcoder.encode("pw");
-        ApplicationUser newUser = new ApplicationUser("admin", "test.email@example.com", password, ApplicationUser.Role.ADMIN);
-        this.service.saveUser(newUser);
+        //ApplicationUser newUser = new ApplicationUser("admin", "test.email@example.com", password, ApplicationUser.Role.ADMIN);
+        //this.service.saveUser(newUser);
         String password2 = pwendcoder.encode("as");
-        ApplicationUser newUser2 = new ApplicationUser("user", "test2.email@example.com", password2, ApplicationUser.Role.DEACTIVATED);
-        this.service.saveUser(newUser2);
+       // ApplicationUser newUser2 = new ApplicationUser("user", "test2.email@example.com", password2, ApplicationUser.Role.DEACTIVATED);
+        //this.service.saveUser(newUser2);
     }
 
     @GetMapping(path = "/register/view")
@@ -87,7 +90,9 @@ public class AuthController {
             return "register";
         } else {
             user.setPassword(pwendcoder.encode(user.getPassword()));
-            user.setRole(ApplicationUser.Role.DEACTIVATED);
+            Collection<Role> roles = null;
+            roles.add(new Role(0l, "Deactivated", Role.Type.DEACTIVATED));
+            user.setRoles(roles);
             service.saveUser(user);
             sendEmail(user.getEmail(), user.getId());
 
