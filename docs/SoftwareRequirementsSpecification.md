@@ -62,7 +62,9 @@ Backend:
 * SpringFramework
 
 Frontend:
-* tbd
+* Html
+* Css
+* Figma
 
 IDE:
 * IntelliJ
@@ -75,6 +77,9 @@ Project Management:
 Deployment:
 * Java
 
+Database:
+* tbd
+
 Testing:
 * tbd
 
@@ -85,36 +90,42 @@ Testing:
 This section will explain the different use cases, you could see in the Use Case Diagram, and their functionality
 
 * 3.1.1 Create Account
-* 3.1.2 Choose username / Choose topic text
+* 3.1.2 Choose topic text
 * 3.1.3 Chat
 * 3.1.4 Quit chat/disconnect
 * 3.1.5 Block another user
 
 3.1.1 [Create Account](/docs/use_cases/CreateAccount.md)
 
-This will be the beginning for every interaction on our platform.
-To initiate a chat the user first has to create an account.
+This is the beginning for every interaction on our platform.
+To initiate a chat the user has to create an account. Here he has to choose a username and enter an e-mail adress.
+The username will be visible to the chat partner, once a successful match has been made.
+These data will be saved in the database of common.
 
-3.1.2 [Choose username / Choose topic text](/docs/use_cases/ChooseUsernameAndTopic.md)
+3.1.2 [Choose topic text](/docs/use_cases/ChooseUsernameAndTopic.md)
 
-The user will be able to choose a username which will be visible to the chat partner, once a successful match has been made.
-Additionally, a topic of interest has to be entered. This will be used as a basis to make a match with another person.
+A topic of interest has to be entered. This will be used as a basis to make a match with another person. 
+There is also the option to click on a suggested topic. These topics were entered by other user, who haven´t found a chatpartner yet. 
 
 3.1.3 [Chat](/docs/use_cases/Chat.md)
 
 This will be the main activity and will be automatically visible to the user, once a successful match has been made.
 Here the user can chat with the matched partner.
+Data in the chat is not saved in the database.
 
 3.1.4 [Quit chat / disconnect](/docs/use_cases/QuitChatOrDisconnect.md)
 
 To provide an option to leave the session, the user can click a button and the session will be terminated.
-Once the session has been terminated, the users will both respectively be dropped back to the "Choose topic" window described in 3.1.1.
+Once the session has been terminated, the users will both respectively be dropped back to the "Choose topic" window described in 3.1.2.
+After leaving a chat, the data will be lose. 
 
 3.1.5 [Block user](/docs/use_cases/BlockAnotherUser.md)
 
 If one of the opposing partners is going against our user guidelines, the user has the option to report the user.
 Should this happen, the IP address of the opposing partner and the IP address of the user will be logged, and ensured that a match between those partners can no longer happen.
 The session will be terminated.
+
+The Administrator has also the option to delete an account.
 
 ## 3.2 Usability
 
@@ -165,9 +176,11 @@ The usage of the app should be as intuitive as possible so it won't need any fur
 3.8.1 User Interfaces
 
 The User interfaces we will implement:
-* Dashboard - Adds the possibility to set a name and choose a topic the user wants to talk about.
+* Dashboard - Adds the posibility to create an account or log in.
+* Create Account - Adds the possibility to create an account..
+* Choose Topic - Adds the posibility to choose a topic the user wants to talk about.
 * Chat Page - Shows information about the session and a chat window.
-* Settings - Shows the settings
+* Settings - Shows the settings.
 
 3.8.2 Software Interfaces
 
