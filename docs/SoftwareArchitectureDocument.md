@@ -43,3 +43,31 @@ Use-Case Realizations:
 
 # 6. Process View
 
+DIAGRAMM FEHLT!!!!!
+
+As you can see from our diagram, we have four processes here. The authentication and the chat thread use Session Management. To start a session, matchmaking also uses the Session Management. Matchmaking is the logic to connect users together.
+
+# 7. Deployment View
+
+# 8. Implementation View
+
+## 8.1 Overview
+
+![ComponentDiagram](/docs/component_diagrams/ComponentDiagram.png)
+
+## 8.2 Layers
+
+# 9. Data View
+
+Only personal data is saved in our database. Personal data means the data to create an account for example email address and password.  
+Data that is shared in the chat is lost after leaving.
+
+# 10. Size and Performance
+
+# 11. Quality
+
+![SecurityTacticsTree](/docs/SAD/Tactics_Tree.png)
+
+A DDoS attack could theoretically disrupt our service by flooding our servers with requests they cannot handle. To avoid this, we first have to detect them. By the very nature of a DDoS attack, they are easily identified since much more requests than usual are coming into the server. Due to the fact that it is a distributed attack, it would be useless to simply block the IP address of the attacker. Therefore we decided to enable rate limiting in the case of such an attack. This allows us to still provide a limited version of our service in the event of an attack.
+To avoid third parties and malicious actors to read chat data and information, we will use a TLS encryption between the server and client.
+Through authentication and authorization we ensure that only verified users have access to our service. This not only helps with the issues stated above, but also helps keeping our users safe.
