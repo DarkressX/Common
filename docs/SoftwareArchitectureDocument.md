@@ -66,7 +66,7 @@ Data that is shared in the chat is lost after leaving.
 
 # 11. Quality
 
-![SecurityTacticsTree](/docs/SAD/Tactics_Tree.png)
+![SecurityTacticsTree](/docs/SAD/SecurityTacticsTree.png)
 
 A DDoS attack could theoretically disrupt our service by flooding our servers with requests they cannot handle. To avoid this, we first have to detect them. By the very nature of a DDoS attack, they are easily identified since much more requests than usual are coming into the server. Due to the fact that it is a distributed attack, it would be useless to simply block the IP address of the attacker. Therefore we decided to enable rate limiting in the case of such an attack. This allows us to still provide a limited version of our service in the event of an attack.
 To avoid third parties and malicious actors to read chat data and information, we will use a TLS encryption between the server and client.
