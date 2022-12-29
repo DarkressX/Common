@@ -43,7 +43,7 @@ Use-Case Realizations:
 
 # 6. Process View
 
-DIAGRAMM FEHLT!!!!!
+![ComponentSequenceDiagram](/docs/component_diagrams/ComponentSequenceDiagram.png)
 
 As you can see from our diagram, we have four processes here. The authentication and the chat thread use Session Management. To start a session, matchmaking also uses the Session Management. Matchmaking is the logic to connect users together.
 
