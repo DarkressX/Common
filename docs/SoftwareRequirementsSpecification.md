@@ -19,7 +19,7 @@ Planned Subsystems are:
   -	Storing Data:  
     The Data will be stored in a Database System. 
   - Topic:
-    The user can write a topic of interesst with an input option or choose a topic with proposal topics.
+    The user can write a topic of interest with an input option or choose a topic with proposal topics.
     
 
 ## 1.3 Definitions
