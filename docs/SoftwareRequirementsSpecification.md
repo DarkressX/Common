@@ -19,20 +19,13 @@ Planned Subsystems are:
   -	Storing Data:  
     The Data will be stored in a Database System. 
   - Topic:
-    If a topic is in the same category of another topic for example banana and apple are both fruits, then they also will get connected.
-    There will also be same recommendations for the Users if they don't know what kind of topic they should choose. 
+    The user can write a topic of interesst with an input option or choose a topic with proposal topics.
     
 
 ## 1.3 Definitions
-| Abbreviation | Explanation                         |
-|--------------|-------------------------------------|
-| SRS          | Software Requirements Specification |
-| UC           | Use Case                            |
-| Web-App      | Web-Application                     |
-| UCD          | Use Case Diagram                    |
-| tbd          | to be determined                    |
-| FAQ          | Frequently asked questions          |
-| API          | Application programming interface   |
+Important terms that are used in this document you can find in our glossary:
+
+[Glossary](https://github.com/DarkressX/Common/blob/main/docs/Glossary)
 
 ## 1.4 References
 | Title                                         | Date        | Publishing organization  |
