@@ -7,7 +7,15 @@ This document provides a comprehensive architectural overview of the system, usi
 
 ## 1.3 Definitions, Acronyms, Abbreviations
 
+| Abbreviation | Explanation                   |
+|--------------|-------------------------------|
+| DDoS         | Distributed Denial of Service |
+| TLS          | Transport Layer Security      |
+
 ## 1.4 References
+
+This document does not include external references.
+References created by the Common Team, are linked appropriately in this document.
 
 ## 1.5 Overview
 
@@ -36,6 +44,8 @@ Use-Case Realizations:
 [StartChat](/docs/use_cases/UseCaseRealizationSpecifiaction/StartChat.md)
 
 # 5. Logical View
+
+![ClassDiagram](/docs/class_diagrams/class_diagram_backend.png)
 
 ## 5.1 Overview
 
