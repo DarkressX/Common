@@ -12,7 +12,7 @@ Here the User has to create an account. They can log in and log out.
 
 Activity Diagram
 
-![CreateAccountActivityDiagram](/docs/use_cases/images/ActivityDiagrams/CreateAccountActivityDiagram.jpg)
+![CreateAccountActivityDiagram](/docs/activity_diagrams/CreateAccountActivityDiagram.jpg)
 
 ## 4. Preconditions
 

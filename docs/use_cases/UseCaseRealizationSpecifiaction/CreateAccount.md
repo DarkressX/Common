@@ -23,7 +23,7 @@ This Use-Case-Realization Specification will contain a sequence diagram, explain
 ## 2. Flow of Events
 Sequence Diagram:
 
-![CreateAccountSequenceDiagram](/docs/use_cases/images/SequenceDiagrams/CreateAccount.png)
+![CreateAccountSequenceDiagram](/docs/sequence_diagrams/CreateAccount.png)
 
 First the Client will connect to our Website. Here the front end will present the user the choice to create an account.
 A user account is mandatory to use the site. Should the user choose to create an account, he will be asked to enter a username and password.

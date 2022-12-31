@@ -1,0 +1,39 @@
+Body {
+	background: no-repeat url('doodle.png')
+}
+
+.button {
+  border: 3px solid #8950AC;
+  border-radius: 19px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button1 {
+  position: absolute;
+  top: 45%;
+  left: 36.5%;
+  background-color: #9965B7;
+  color: black;
+}
+
+.button1:hover {
+  background-color: #8950AC;
+  color: white;
+}
+
+.button2 {
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  background-color: #9965B7;
+  color: black;
+}
+
+.button2:hover {
+  background-color: #8950AC;
+  color: white;
+}

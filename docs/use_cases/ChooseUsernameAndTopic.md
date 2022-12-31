@@ -12,7 +12,7 @@ Here, the user will be able to select a name which will be visible to other user
 
 Activity Diagram
 
-![TopicSearchActivityDiagram](/docs/use_cases/images/ActivityDiagrams/TopicSearchActivityDiagram.png)
+![TopicSearchActivityDiagram](/docs/activity_diagrams/TopicSearchActivityDiagram.png)
 
 ## 4. Preconditions
 

@@ -12,7 +12,7 @@ Here the user will be able to chat with another person.
 
 Activity Diagram
 
-![ChatFunctionsActivityDiagram](/docs/use_cases/images/ActivityDiagrams/ChatFunctionsActivityDiagram.png)
+![ChatFunctionsActivityDiagram](/docs/activity_diagrams/ChatFunctionsActivityDiagram.png)
 
 ## 4. Preconditions
 

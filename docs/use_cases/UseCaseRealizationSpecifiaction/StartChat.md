@@ -21,7 +21,7 @@ This Use-Case-Realization Specification will contain a sequence diagram, explain
 ## 2. Flow of Events
 Sequence Diagram:
 
-![StartChatSequenceDiagram](/docs/use_cases/images/SequenceDiagrams/StartChat.png)
+![StartChatSequenceDiagram](/docs/sequence_diagrams/StartChat.png)
 
 To start a chat, there have to be a number of preconditions to be met.
 * The user has to have an account
