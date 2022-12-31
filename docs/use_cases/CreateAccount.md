@@ -2,11 +2,13 @@
 
 ## 1. Description
 
-Here the User has to create an account. They can log in and log out. 
+The User can create an account. He has to enter an e-mail adresse, his username and a password. This data is saved in a database.
+
+After creating an accout the user is able to log in and log out.
 
 ## 2. Mockup
 
-*tbd*
+[Figma](https://www.figma.com/file/XRUuv4HZqI6cuHeXbQo036/Common?node-id=24%3A3&t=YM5BT3cBV1LbIeVL-1)
 
 ## 3. Flow of Events
 
@@ -16,12 +18,11 @@ Activity Diagram
 
 ## 4. Preconditions
 
-* tbd*
+none
 
 ## 5. Postconditions
 
 - Account is created and user is logged in.
 
 ## 6. Effort estimation
-
 5h
