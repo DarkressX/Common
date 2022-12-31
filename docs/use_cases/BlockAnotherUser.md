@@ -6,7 +6,7 @@ Here the user has the option to block another user, which will automatically rep
 
 ## 2. Mockup
 
-*tbd*
+[*figma*](https://www.figma.com/file/XRUuv4HZqI6cuHeXbQo036/Common?node-id=24%3A3&t=YM5BT3cBV1LbIeVL-1)
 
 ## 3. Preconditions
 
