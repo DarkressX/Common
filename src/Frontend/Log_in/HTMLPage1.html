@@ -2,19 +2,21 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-     <link rel="stylesheet" href="common.css">
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="common.css">
     <title>Common</title>
+    <script defer src="login.js"></script>
 </head>
 <body>
 
 
-    <img id="commonPNG" src="common.png" alt="common-Logo">
+<img id="commonPNG" src="common.png" alt="common-Logo">
 
-    <p> <input id="Name" type="text" placeholder="Username" ></p>
-    <p></p><input id="Password" type="password" placeholder="Password"></P>
-    <input id="Enter" class="submit" value="Submit" type="button" />
-
+<form id="login-form" action="http://localhost:8080/login" method="POST">
+    <p><input id="username" type="text" name="username" placeholder="Username"></p>
+    <p><input id="password" type="password" name="password" placeholder="Password"></p>
+    <input id="login_button" class="submit" value="Submit" type="button"/>
+</form>
 
 
 </body>
