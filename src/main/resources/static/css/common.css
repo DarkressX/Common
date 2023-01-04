@@ -1,0 +1,84 @@
+html, body {
+  background: url(hintergrund.png) repeat-y;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    font-weight: 300;
+    background-size: cover;
+}
+
+
+
+
+input{
+    border:1em;
+    outline: none;
+    display:inline-block;
+    height:2em;
+    vertical-align:middle;
+    position:relative;
+    bottom:14px;
+    left:43%;
+    border-radius:22px;
+    width:220px;
+    box-sizing:border-box;
+    padding:0 18px;
+    top: 10em;
+  }
+
+
+  input[type="button"]{ 
+    background:rgba(197,62,126,.33) ! important;
+    position:relative;
+    left:46.5%;
+    top:10em;
+    width:110px;
+    cursor:pointer;
+  }
+
+.text{
+     font-size: 200%;
+     text-align: center;
+     position:absolute;
+     border: 0.2em solid #8950AC;
+     width: 35%;
+     padding: 2%;
+     left:30%;
+     top: 30%;
+
+
+
+}
+  .submit:hover{
+  background-color: #8950AC;
+  color: white;
+
+  }
+
+
+
+  #commonPNG{
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  width: 40%;
+  height: 20%;
+  left: 25em;
+  top: -1%;
+
+  }
+#Name{
+text-align: center;
+
+
+}
+
+#Password{
+
+text-align: center;
+
+}
+
+
+
+
