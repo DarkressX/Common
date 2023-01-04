@@ -41,9 +41,14 @@ public class SecurityConfig
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception
     {
+
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(STATELESS);
         http.authorizeRequests().antMatchers("/api/token/refresh**").permitAll();
+        http.authorizeRequests().antMatchers(GET,"/").permitAll();
+        http.authorizeRequests().antMatchers(GET,"/css/**").permitAll();
+        http.authorizeRequests().antMatchers(GET,"/img/**").permitAll();
+        http.authorizeRequests().antMatchers(GET,"/js/**").permitAll();
         http.authorizeRequests().antMatchers(GET, "/api/user/**").hasAnyAuthority("ROLE_USER");
         http.authorizeRequests().antMatchers(POST, "/api/users").hasAnyAuthority("ROLE_ADMIN");
         http.authorizeRequests().anyRequest().authenticated();
