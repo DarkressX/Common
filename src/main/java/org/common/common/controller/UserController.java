@@ -5,9 +5,11 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.common.common.model.Role;
 import org.common.common.model.User;
 import org.common.common.service.UserService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
@@ -31,6 +33,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @CrossOrigin("*")
 @RequestMapping("/api")
 @RestController
+@Slf4j
 public class UserController
 {
     private final UserService userService;
@@ -50,7 +53,16 @@ public class UserController
     public ResponseEntity<User>saveUser(@RequestBody User user)
     {
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/user/save").toUriString()); //get url
-        return ResponseEntity.created(uri).body(userService.saveUser(user));
+        try{
+            if(userService.getUser(user.getUsername()).getUsername().equals(user.getUsername()))
+            {
+                return ResponseEntity.badRequest().body(user);
+            }
+        } catch(NullPointerException e) {
+            return ResponseEntity.created(uri).body(userService.saveUser(user));
+        }
+
+        return ResponseEntity.badRequest().build(); //This should not be necessary but Java does not know this and throws an error
     }
 
     @PostMapping("/role/save")
