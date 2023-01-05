@@ -1,6 +1,6 @@
 package org.common.common.service;
 
-//import lombok.extern.slf4j.Slf4j;
+import lombok.extern.slf4j.Slf4j;
 import org.common.common.model.Role;
 import org.common.common.model.User;
 import org.common.common.repository.RoleRepository;
@@ -19,7 +19,7 @@ import java.util.List;
 
 @Service
 @Transactional
-//@Slf4j
+@Slf4j
 public class UserServiceImpl implements UserService, UserDetailsService
 {
     private final UserRepository userRepository;
@@ -73,7 +73,7 @@ public class UserServiceImpl implements UserService, UserDetailsService
     @Override
     public User getUser(String username)
     {
-        //log.info("Fetching user {}", username);
+        log.info("Fetching user {}", username);
         return userRepository.findByUsername(username);
     }
 
